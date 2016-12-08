@@ -1,0 +1,31 @@
+{
+  "name": "vue2-lab",
+  "description": "vue2.0 的试验工厂",
+  "version": "0.0.1",
+  "keywords": [
+    "vue2.0",
+    "longze",
+    "node",
+    "javascript"
+  ],
+  "author": {
+    "name": "赵晓强",
+    "email": "longze_xq@163.com"
+  },
+  "scripts": {
+    "build-pack": "node ./build/build-pack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/longze/vue2-lab.git"
+  },
+  "dependencies": {
+    "vue": "^2.1.4",
+    "webpack": "^1.14.0"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "license": "MIT"
+}
