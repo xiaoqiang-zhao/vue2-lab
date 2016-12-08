@@ -20,7 +20,10 @@
     "url": "git://github.com/longze/vue2-lab.git"
   },
   "dependencies": {
+    "css-loader": "^0.26.1",
     "vue": "^2.1.4",
+    "vue-loader": "^10.0.0",
+    "vue-template-compiler": "^2.1.0",
     "webpack": "^1.14.0"
   },
   "engines": {

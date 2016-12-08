@@ -3,14 +3,17 @@
  *
  * Created by zhaoxiaoqiang on 2016/12/8.
  */
-var append = require('./append.js');
+var Vue = require('vue');
+var CompA = require('./components/a');
+var CompB = require('./components/b');
 
-setTimeout(function () {
-  var body = document.getElementsByTagName('body')[0];
-  body.innerHTML = '<h1>包管理能跑起来了</h1>';
-  append.do(body, '子模块也能打到包里了');
-}, 300);
-
-module.exports = {
-  name: 'test'
-};
+new Vue({
+    el: '#app',
+    components: {
+      compA: CompA,
+      compB: CompB,
+    },
+    data: {
+        name: 'test'
+    }
+});

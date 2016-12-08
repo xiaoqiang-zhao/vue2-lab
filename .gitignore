@@ -1,7 +1,5 @@
 node_modules
-dist
-# 设置特例
-!dist/index.html
+dist/index.js
 .DS_Store
 .svn
 *.log

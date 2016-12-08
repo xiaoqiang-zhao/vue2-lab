@@ -5,12 +5,26 @@
 
 module.exports = {
     entry: {
-        main: '/Users/zhaoxiaoqiang/code-git/vue2-lab/src/index.js'
+        main: '../src/index.js'
     },
 
     output: {
-        path: '/Users/zhaoxiaoqiang/code-git/vue2-lab/dist/',
-        // publicPath: '/js/',
+        path: '../dist/',
         filename: 'index.js'
+    },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.common.js'
+        },
+        extensions: ['', '.js', '.vue']
+    },
+
+    module: {
+        loaders: [
+            {
+                test: /\.vue$/,
+                loader: 'vue'
+            }
+        ]
     }
 };
