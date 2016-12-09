@@ -5,11 +5,11 @@
 
 module.exports = {
     entry: {
-        main: '../src/index.js'
+        main: './src/index.js'
     },
 
     output: {
-        path: '../dist/',
+        path: './dist/',
         filename: 'index.js'
     },
     resolve: {
