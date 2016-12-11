@@ -190,6 +190,12 @@ js 部分：
 
 到目前为止终于把 vue 组件化用起来了。
 
+## Vue Router
+
+我们的项目只有一个页面的可能性不太大，将多个页面串起来就需要 vue-router。Only Vue Router 2 is compatible with Vue 2，Vue 2 只支持 Vue Router 2，在 [github release](https://github.com/vuejs/vue-router/releases) 上找最新的版本号：v2.1.1，然后安装：
+
+    npm install vue-router@2.1.1 --save
+
 ## 参考
 
 [Standalone-vs-Runtime-only-Build](https://vuejs.org/v2/guide/installation.html#Standalone-vs-Runtime-only-Build)

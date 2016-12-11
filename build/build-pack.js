@@ -5,8 +5,8 @@
  */
 
 console.log('--- 打包 ---');
-var webpack = require('webpack')
-var webpackConfig = require('../config/webpack.config')
+var webpack = require('webpack');
+var webpackConfig = require('../config/webpack.config');
 
 webpack(webpackConfig, function (err, stats) {
     // 打包完可以干一些事情

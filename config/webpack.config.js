@@ -19,14 +19,14 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.common.js'
         },
-        extensions: ['', '.js', '.vue']
+        extensions: ['.js', '.vue']
     },
 
     module: {
         loaders: [
             {
                 test: /\.vue$/,
-                loader: 'vue'
+                loader: 'vue-loader'
             }
         ]
     }
