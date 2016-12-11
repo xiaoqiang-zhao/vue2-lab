@@ -10,9 +10,9 @@
 
     npm i vue@2.1.4 --save
 
-然后是 webpack 包管理工具，老办法：[git releases](https://github.com/webpack/webpack/releases)，最新版：v1.14.0。
+然后是 webpack 包管理工具，老办法：[git releases](https://github.com/webpack/webpack/releases)，最新版：v2.1.0-beta.27。
 
-    npm i webpack@1.14.0 --save
+    sudo npm i  webpack@2.1.0-beta.27 --save
 
 ## 一个简单的页面要跑起来
 
@@ -53,7 +53,7 @@
 
 ## vue 在哪？
 
-博士买驴，书券三纸，未有驴字。谢了这么多还没看见 vue 在项目代码中出现，npm 安装之后要怎么用呢？
+博士买驴，书券三纸，未有驴字。写了这么多还没看见 vue 在项目代码中出现，npm 安装之后要怎么用呢？
 
 这一趴要把vue的组件化搞定。
 
