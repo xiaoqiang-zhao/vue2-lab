@@ -196,8 +196,86 @@ js 部分：
 
     npm install vue-router@2.1.1 --save
 
+然后就可以创建几个页面来使用路由了，下面是几处关键代码：
+
+html：
+
+    <div id="app">
+        <router-view></router-view>
+    </div>
+
+index.js
+
+    var Vue = require('vue');
+    var VueRouter = require('vue-router');
+    var routerConfig = require('./router-config');
+    
+    var router = new VueRouter({
+        transitionOnLoad: false,
+        routes: routerConfig
+    });
+    
+    Vue.use(VueRouter);
+    
+    new Vue({
+        router: router
+    }).$mount('#app');
+
+其中用到的 `router-config` 配置文件 `router-config.js` 的代码：
+
+    var PageA = require('./page/page-a');
+    var PageB = require('./page/page-b');
+    
+    module.exports = [
+        {
+            path: '/',
+            component: PageA
+        },
+        {
+            name: 'pageA',
+            path: '/page/a',
+            component: PageA
+        },
+        {
+            name: 'pageB',
+            path: '/page/b',
+            component: PageB
+        }
+    ];
+
+其中页面 `./page/page-a` 的代码 `./page/page-a/index.vue`：
+
+    <template>
+        <div>
+            当前页面：Page A
+            <div>
+                <router-link to="/page/b"> 跳转到 Page B </router-link>
+            </div>
+        </div>
+    </template>
+    <script>
+        module.exports = {
+            data: function () {
+                return {};
+            }
+        };
+    </script>
+    <style>
+        div {
+            padding: 20px;
+            text-align: center;
+            color: red;
+        }
+    </style>
+
+其中 `Vue.use(VueRouter)` 容易被忽略，官网有这么一句話： 
+
+    0. If using a module system (e.g. via vue-cli), import Vue and VueRouter and then call Vue.use(VueRouter).
+
+如果使用模块化机制编程，需要调用 `Vue.use(VueRouter)`。
+
 ## 参考
 
 [Standalone-vs-Runtime-only-Build](https://vuejs.org/v2/guide/installation.html#Standalone-vs-Runtime-only-Build)
     
-    
+[vue router getting started](http://router.vuejs.org/en/essentials/getting-started.html)    

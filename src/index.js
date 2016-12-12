@@ -4,16 +4,16 @@
  * Created by zhaoxiaoqiang on 2016/12/8.
  */
 var Vue = require('vue');
-var CompA = require('./components/a');
-var CompB = require('./components/b');
+var VueRouter = require('vue-router');
+var routerConfig = require('./router-config');
+
+var router = new VueRouter({
+    transitionOnLoad: false,
+    routes: routerConfig
+});
+
+Vue.use(VueRouter);
 
 new Vue({
-    el: '#app',
-    components: {
-      compA: CompA,
-      compB: CompB,
-    },
-    data: {
-        name: 'test'
-    }
-});
+    router: router
+}).$mount('#app');
