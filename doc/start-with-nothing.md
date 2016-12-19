@@ -8,11 +8,11 @@
 
 首先是 vue，版本在这里找：[git releases](https://github.com/vuejs/vue/releases)，好最新版：v2.1.4，我们就安装这个。
 
-    npm i vue@2.1.4 --save
+    npm i vue@2.1.4 -save
 
 然后是 webpack 包管理工具，老办法：[git releases](https://github.com/webpack/webpack/releases)，最新版：v2.1.0-beta.27。
 
-    sudo npm i  webpack@2.1.0-beta.27 --save
+    sudo npm i  webpack@2.1.0-beta.27 -save-dev
 
 ## 一个简单的页面要跑起来
 
@@ -59,9 +59,9 @@
 
 先把需要的包装上：
 
-    npm i css-loader@0.26.1 --save
-    npm i vue-template-compiler@2.1.0 --save
-    npm i vue-loader@10.0.0 --save
+    npm i css-loader@0.26.1 -save-dev
+    npm i vue-template-compiler@2.1.0 -save
+    npm i vue-loader@10.0.0 -save-dev
 
 最简单的 vue 实例，用 render 函数绕过对模板的依赖
 
@@ -194,7 +194,7 @@ js 部分：
 
 我们的项目只有一个页面的可能性不太大，将多个页面串起来就需要 vue-router。Only Vue Router 2 is compatible with Vue 2，Vue 2 只支持 Vue Router 2，在 [github release](https://github.com/vuejs/vue-router/releases) 上找最新的版本号：v2.1.1，然后安装：
 
-    npm install vue-router@2.1.1 --save
+    npm install vue-router@2.1.1 -save
 
 然后就可以创建几个页面来使用路由了，下面是几处关键代码：
 
@@ -274,6 +274,21 @@ index.js
 
 如果使用模块化机制编程，需要调用 `Vue.use(VueRouter)`。
 
+## mock
+
+## vue-resource
+
+## 酷酷的锦上添花
+
+### hot
+
+### eslint
+
+### less
+
+### es6
+
+### 测试 - karma
 
 ## 参考
 
