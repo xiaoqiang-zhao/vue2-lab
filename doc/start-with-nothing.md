@@ -278,13 +278,21 @@ index.js
 
 ## vue-resource
 
+## 代理
+
 ## 酷酷的锦上添花
 
 ### hot
 
 ### eslint
 
-### less
+### less，sass，stylus
+
+### sprite
+
+精灵图，雪碧图的css化。
+
+### 后处理器
 
 ### es6
 
