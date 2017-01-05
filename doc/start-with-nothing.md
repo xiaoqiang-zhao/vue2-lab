@@ -278,11 +278,19 @@ index.js
 
 ## vue-resource
 
+ajax 库
+
 ## 代理
 
 ## 酷酷的锦上添花
 
 ### hot
+
+[Gulp.js-livereload 不用F5了，实时自动刷新页面来开发](https://cnodejs.org/topic/53427d16dc556e3b3901861e)
+
+[多设备同步操作](http://www.browsersync.io/)
+
+路径中有特殊符号(如井号和点号)会对监听文件改变有影响，可能出现代码改了却不自动编译。
 
 ### eslint
 
