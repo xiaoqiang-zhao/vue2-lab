@@ -26,7 +26,7 @@
         "lab-start": "webpack ./config/webpack.config.start.js"
     }
 
-但是发现行不通，离开了 config 文件夹就玩不转了(知道怎么解决的劳烦告诉一下，红包答谢)。然后查看 vuecli 的源码是用 node 脚本包装了一下搞定的，好我也照猫画虎的搞一下，写一个 node 脚本：
+但是发现行不通，离开了 config 文件夹就玩不转了(知道怎么解决的劳烦告诉一下，红包答谢)。然后查看 vuecli 的源码是用 node 脚本包装了一下搞定的，那我也照猫画虎的搞一下，写一个 node 脚本：
 
     var webpack = require('webpack');
     var webpackConfig = require('../config/webpack.config');
@@ -283,14 +283,6 @@ ajax 库
 ## 代理
 
 ## 酷酷的锦上添花
-
-### hot
-
-[Gulp.js-livereload 不用F5了，实时自动刷新页面来开发](https://cnodejs.org/topic/53427d16dc556e3b3901861e)
-
-[多设备同步操作](http://www.browsersync.io/)
-
-路径中有特殊符号(如井号和点号)会对监听文件改变有影响，可能出现代码改了却不自动编译。
 
 ### eslint
 
