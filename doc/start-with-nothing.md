@@ -298,6 +298,10 @@ ajax 库
 
 ### 测试 - karma
 
+## 坑 与 填坑
+
+路径中有特殊符号(如井号和点号)会对监听文件改变有影响，可能出现代码改了却不自动编译的情况，解决办法也很简单把路径改成纯英文数字的就可以了。
+
 ## 参考
 
 [Standalone-vs-Runtime-only-Build](https://vuejs.org/v2/guide/installation.html#Standalone-vs-Runtime-only-Build)
