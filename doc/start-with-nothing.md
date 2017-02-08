@@ -43,7 +43,7 @@
 
 终于可以运行一下脚本了：
 
-    run build-pack
+    npm run build-pack
 
 运行之后可以看到在 `/dist/` 下面多了一个 `index.js` 文件，恭喜恭喜，终于把包打出来了，直接在浏览器中查看 `dist/index.html`，看到了下面的页面：
 
