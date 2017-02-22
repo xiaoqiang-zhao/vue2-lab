@@ -13,7 +13,8 @@
     "email": "longze_xq@163.com"
   },
   "scripts": {
-    "build-pack": "node ./build/build-pack.js"
+    "build-pack": "node ./build/build-pack.js",
+    "build-examples": "node ./build/build-examples.js"
   },
   "repository": {
     "type": "git",
