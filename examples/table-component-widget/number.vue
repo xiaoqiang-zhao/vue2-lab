@@ -12,7 +12,7 @@
             columnOptions: Object
         },
         data: function () {
-
+            return {};
         }
     };
 </script>
