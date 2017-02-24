@@ -16,6 +16,10 @@ var router = new VueRouter({
         {
             path: '/slot',
             component: require('./slot')
+        },
+        {
+            path: '/table',
+            component: require('./table')
         }
     ]
 });

@@ -15,7 +15,10 @@
                     <span v-for="item in props.list">{{ item.name }}</span>
                 </div>
             </template>
-
+            <template slot="custom-comp" scope="props">
+                <custom-comp :options="props.data"></custom-comp>
+            </template>
+            <div slot="alive">动态组件</div>
         </children-comp>
     </div>
 </template>
@@ -29,7 +32,8 @@
             };
         },
         components: {
-            'children-comp': require('./children-comp.vue')
+            'children-comp': require('./children-comp.vue'),
+            'custom-comp': require('./custom-comp.vue')
         }
     };
 </script>

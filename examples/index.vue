@@ -4,6 +4,9 @@
             <li>
                 <router-link to="/slot"> slot </router-link>
             </li>
+            <li>
+                <router-link to="/table"> table </router-link>
+            </li>
         </ul>
     </div>
 </template>
