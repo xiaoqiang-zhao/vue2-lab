@@ -276,13 +276,67 @@ index.js
 
 如果使用模块化机制编程，需要调用 `Vue.use(VueRouter)`。
 
-## mock
+## server
+
+我们使用 Koa 和其中间件来搭建本地服务。
+
+### 静态文件
+
+首先是静态文件的支持，安装依赖包：
+
+    npm install koa --save-dev
+    npm i koa-static --save-dev
+
+在 build 下新建 server.js 文件，配置代码非常简单：
+
+    const config = {
+        port: 4000
+    };
+    
+    const Koa = require('koa');
+    const app = new Koa();
+    var koaStatic = require('koa-static');
+    
+    // 静态文件支持
+    app.use(koaStatic('./dist/', {
+        // index: 'index.html'
+    }));
+    
+    app.listen(config.port);
+    console.log('服务已启动: localhost:' + config.port);
+
+在 package.json 中配置脚本 `"server": "node ./build/server.js"`
+
+    "scripts": {
+        "server": "node ./build/server.js"
+    }
+
+然后在当前目录下控制台运行 `npm run server` 就可以在浏览器中访问了。
+
+### mock
+
+对于 mock 数据，我们不需要像正式项目那样配置路由和后端代码的映射关系，最简单的方式就是采用一种逻辑映射：
+
+    ${mock}
+        ├── get
+            ├── a/index.js
+        ├── post
+            ├── a/index.js
+        ├── delete
+            ├── a/index.js
+        └── ...
+
+如果接口 `/a` 的 method 是 get 那么执行 get/a/index.js 获取数据；同理如果接口 `/a` 的 method 是 post 那么执行 post/a/index.js 获取数据。
+
+### proxy
 
 ## vue-resource
 
 ajax 库
 
-## 代理
+
+
+https://github.com/popomore/koa-proxy
 
 ## 酷酷的锦上添花
 

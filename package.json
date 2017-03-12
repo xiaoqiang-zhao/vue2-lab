@@ -14,7 +14,8 @@
   },
   "scripts": {
     "build-pack": "node ./build/build-pack.js",
-    "build-examples": "node ./build/build-examples.js"
+    "build-examples": "node ./build/build-examples.js",
+    "server": "node ./build/server.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +28,8 @@
   },
   "devDependencies": {
     "css-loader": "^0.26.1",
-    "koa": "^1.2.4",
-    "koa-router": "^5.4.0",
+    "koa": "^2.1.0",
+    "koa-static": "^3.0.0",
     "vue-loader": "^10.0.0",
     "webpack": "^2.1.0-beta.27"
   },
