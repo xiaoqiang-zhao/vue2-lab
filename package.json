@@ -15,7 +15,7 @@
   "scripts": {
     "build-pack": "node ./build/build-pack.js",
     "build-examples": "node ./build/build-examples.js",
-    "server": "node ./build/server.js"
+    "server": "node --harmony ./build/server.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "css-loader": "^0.26.1",
     "koa": "^2.1.0",
+    "koa-proxy": "^0.8.0",
     "koa-static": "^3.0.0",
     "vue-loader": "^10.0.0",
     "webpack": "^2.1.0-beta.27"
