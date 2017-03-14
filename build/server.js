@@ -9,7 +9,7 @@
 const Koa = require('koa');
 const app = new Koa();
 const koaStatic = require('koa-static');
-const koaAutoPathRouter = require('./koa-auto-path-router');
+const koaAutoPathRouter = require('koa-auto-path-router');
 const koaProxy = require('koa-proxy');
 
 /**

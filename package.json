@@ -29,10 +29,11 @@
   "devDependencies": {
     "css-loader": "^0.26.1",
     "koa": "^2.1.0",
+    "koa-auto-path-router": "^1.0.2",
     "koa-proxy": "^0.8.0",
     "koa-static": "^3.0.0",
     "vue-loader": "^10.0.0",
-    "webpack": "^2.1.0-beta.27"
+    "webpack": "^2.2.1"
   },
   "engines": {
     "node": ">= 4.0.0",

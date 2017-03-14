@@ -280,7 +280,7 @@ index.js
 
 我们使用 Koa 和其中间件来搭建本地服务。
 
-### 静态文件
+### static
 
 首先是静态文件的支持，安装依赖包：
 
@@ -318,15 +318,24 @@ index.js
 对于 mock 数据，我们不需要像正式项目那样配置路由和后端代码的映射关系，最简单的方式就是采用一种逻辑映射：
 
     ${mock}
-        ├── get
+        ├── GET
             ├── a/index.js
-        ├── post
+        ├── POST
             ├── a/index.js
-        ├── delete
+        ├── DELETE
             ├── a/index.js
         └── ...
 
-如果接口 `/a` 的 method 是 get 那么执行 get/a/index.js 获取数据；同理如果接口 `/a` 的 method 是 post 那么执行 post/a/index.js 获取数据。
+如果接口 `/a` 的 method 是 get 那么执行 GET/a/index.js 获取数据；同理如果接口 `/a` 的 method 是 post 那么执行 POST/a/index.js 获取数据。我们需要这样的一个中间件，搜了半天没找到能满足需求的，好吧我自己造一个，过程不细说我们直接安装：
+
+    npm install koa-auto-path-router
+
+配置使用：
+
+    const koaAutoPathRouter = require('koa-auto-path-router');
+    app.use(koaAutoPathRouter('./mock/'));
+
+关于中间件的开发参考博文[koa 学习笔记](https://longze.github.io/#!/articles/koa)，想详细了解 `koa-auto-path-router` 参见 [GitHub](https://github.com/longze/koa-auto-path-router)。
 
 ### proxy
 
@@ -334,9 +343,6 @@ index.js
 
 ajax 库
 
-
-
-https://github.com/popomore/koa-proxy
 
 ## 酷酷的锦上添花
 
