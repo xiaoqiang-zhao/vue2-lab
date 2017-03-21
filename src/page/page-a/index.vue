@@ -9,6 +9,14 @@
 <script>
     module.exports = {
         data: function () {
+            this.$http.post(
+                '/a',
+                {
+                    xxxx: 'yyyy',
+                    zzzz: 'uuuu'
+                }
+            );
+
             return {};
         }
     };

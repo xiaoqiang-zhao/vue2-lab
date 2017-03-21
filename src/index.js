@@ -5,6 +5,7 @@
  */
 var Vue = require('vue');
 var VueRouter = require('vue-router');
+var VueResource = require('vue-resource');
 var routerConfig = require('./router-config');
 
 var router = new VueRouter({
@@ -13,6 +14,7 @@ var router = new VueRouter({
 });
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
 new Vue({
     router: router

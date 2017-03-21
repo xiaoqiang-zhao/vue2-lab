@@ -23,13 +23,15 @@
   },
   "dependencies": {
     "vue": "^2.1.4",
+    "vue-resource": "^1.2.1",
     "vue-router": "^2.1.1",
     "vue-template-compiler": "^2.1.0"
   },
   "devDependencies": {
     "css-loader": "^0.26.1",
     "koa": "^2.1.0",
-    "koa-auto-path-router": "^1.0.2",
+    "koa-auto-path-router": "^1.2.0",
+    "koa-bodyparser": "^4.1.0",
     "koa-proxy": "^0.8.0",
     "koa-static": "^3.0.0",
     "vue-loader": "^10.0.0",

@@ -1,8 +1,4 @@
 /**
- * Created by zhaoxiaoqiang on 2017/3/10.
- */
-
-/**
  * Module dependencies.
  */
 
@@ -11,6 +7,7 @@ const app = new Koa();
 const koaStatic = require('koa-static');
 const koaAutoPathRouter = require('koa-auto-path-router');
 const koaProxy = require('koa-proxy');
+const bodyParser = require('koa-bodyparser');
 
 /**
  * Module config.
@@ -24,6 +21,8 @@ const config = {
     proxyUrl: 'http://127.0.0.1:5000',
     mockUrl: './mock/'
 };
+
+app.use(bodyParser());
 
 // 静态文件支持
 app.use(koaStatic('./dist/', {
