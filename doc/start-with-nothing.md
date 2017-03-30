@@ -51,7 +51,7 @@
 
 ![页面展示-1](./img/1.png)
 
-[0.0.2.zip](https://github.com/longze/vue2-lab/archive/0.0.2.zip)
+[0.0.2](https://github.com/longze/vue2-lab/releases/tag/0.0.2)
 
 ## vue 在哪？
 
@@ -194,7 +194,7 @@ js 部分：
 
 ## Vue Router
 
-我们的项目只有一个页面的可能性不太大，将多个页面串起来就需要 vue-router。Only Vue Router 2 is compatible with Vue 2，Vue 2 只支持 Vue Router 2，在 [github release](https://github.com/vuejs/vue-router/releases) 上找最新的版本号：v2.1.1，然后安装：
+我们的项目只有一个页面的可能性不太大，将多个页面串起来就需要 vue-router。安装依赖：
 
     npm install vue-router -save
 
@@ -328,7 +328,7 @@ index.js
 
 如果接口 `/a` 的 method 是 get 那么执行 GET/a/index.js 获取数据；同理如果接口 `/a` 的 method 是 post 那么执行 POST/a/index.js 获取数据。我们需要这样的一个中间件，搜了半天没找到能满足需求的，好吧我自己造一个，过程不细说我们直接安装：
 
-    npm install koa-auto-path-router
+    npm install koa-auto-path-router --save-dev
 
 配置使用：
 
@@ -339,10 +339,51 @@ index.js
 
 ### proxy
 
+你可能需要和后台联调，希望数据请求不再是本地 mock，而是直接请求后端人员的开发机，Koa 提供了一个很方便的中间件 koa-proxy。安装：
+
+    npm install koa-proxy --dev-dev
+
+
+简单配置就可以生效：
+
+    const app = new Koa();
+    const koaProxy = require('koa-proxy');
+    app.use(koaProxy({
+        // 后端人员的 IP 地址
+        host: config.proxyUrl
+    }));
+
 ## vue-resource
 
-ajax 库
+有了上面的 mock 支持我们就可以搞一搞 ajax 了。vue 提供了官方的库 vue-resource，安装：
 
+    npm install vue-resource --save
+
+配置：
+
+    var Vue = require('vue');
+    var VueResource = require('vue-resource');
+    Vue.use(VueResource);
+
+然后就可以在 Vue 组件中直接使用异步请求了：
+    
+    module.exports = {
+        data: function () {
+            this.$http.post(
+                '/a',
+                {
+                    xxxx: 'yyyy',
+                    zzzz: 'uuuu'
+                }
+            );
+
+            return {};
+        }
+    };
+
+## 阶段性整理
+
+到这里必须得东西就都有了，只是比较分散和混乱，我们使用一些代码和工具把他们串起来。
 
 ## 酷酷的锦上添花
 
